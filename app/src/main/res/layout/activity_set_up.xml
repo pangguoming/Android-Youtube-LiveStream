@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".SetUp"
+    android:orientation="vertical">
+
+    <TextView android:text="@string/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/create_broadcast"
+        android:onClick="newBroadcast"
+        android:id="@+id/createBroadcastButton"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter URL"
+                android:id="@+id/urlValue"
+                android:text="http://contextualvideo-shunshou.rhcloud.com/"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Hashtags"
+                android:id="@+id/hashTag"
+                android:text="#123456"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="RPi MAC Address"
+                android:id="@+id/macAddress"
+                android:text="01:02:03:04:05:06"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Youtube Id"
+                android:id="@+id/ytID"
+                android:text="123456"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="RTMP Url"
+                android:id="@+id/ytRTMP"
+                android:text="shunshou.yz1k-qkz0-d3e3-8t5s"/>
+
+            </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Send Json Packet"
+            android:onClick="sendJsonPacket"
+            android:id="@+id/sendJsonPacketButton"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Send Location"
+            android:onClick="sendLocation"
+            android:id="@+id/jsonLocationButton"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Start Stream"
+            android:onClick="androidSetupPost"
+            android:id="@+id/startStreamPost"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Kill Stream"
+            android:onClick="killStream"
+            android:id="@+id/killSTREAM"/>
+
+
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
